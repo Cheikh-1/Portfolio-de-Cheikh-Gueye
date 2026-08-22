@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - Étudiant en L2 Informatique à ESCOA & Directeur Général de SUNU PATRIMOINE LOCAL. Solutions numériques et projets entrepreneuriaux.">
+    <title>Portfolio - Étudiant-Entrepreneur</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-dot"></span> &lt;Gueye Tech/&gt;
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                    <li><a href="pages/a-propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="pages/competences.html" class="nav-link">Compétences</a></li>
+                    <li><a href="pages/projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="pages/experiences.html" class="nav-link">Expériences</a></li>
+                    <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-user-graduate"></i> Étudiant-Entrepreneur
+                    </div>
+                    <h1 class="hero-title">
+                        Créer des <span class="gradient-text">solutions numériques</span> qui résolvent des problèmes concrets
+                    </h1>
+                    <p class="hero-text">
+                        Étudiant en Licence 2 Informatique à ESCOA, je conçois des solutions numériques concrètes tout en dirigeant mes propres projets entrepreneuriaux au Sénégal. Ce qui me passionne dans le développement, c'est de transformer des problèmes réels en outils numériques utiles. Actuellement Directeur Général de SUNU PATRIMOINE LOCAL (transformation de produits locaux) et porteur de plusieurs projets web/SaaS, j'allie compétences techniques et vision entrepreneuriale.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="pages/projets.html" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> Voir mes projets
+                        </a>
+                        <a href="pages/contact.html" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Me contacter
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-img-container">
+                    <div class="hero-img-wrapper">
+                        <img src="images/profil/avatar.jpg" alt="Photo de présentation" class="hero-img">
+                    </div>
+                </div>
+            </section>
+
+        <!-- Brief Highlights Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Aperçu rapide</span>
+                    <h2 class="section-title">Ce que je propose</h2>
+                    <p class="section-description">Un accompagnement complet de l'idée initiale jusqu'à la mise en production sécurisée.</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="glass-card">
+                        <div class="skill-category-title">
+                            <i class="fas fa-laptop-code gradient-text" style="font-size: 1.8rem;"></i> Frontend Moderne
+                        </div>
+                        <p class="project-desc">Création d'interfaces élégantes, réactives et accessibles avec HTML5, CSS3, JavaScript moderne et frameworks récents.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="skill-category-title">
+                            <i class="fas fa-server gradient-text" style="font-size: 1.8rem;"></i> Backend & Base de données
+                        </div>
+                        <p class="project-desc">Développement web et logique d'application en PHP, modélisation et gestion de bases de données relationnelles MySQL.</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <div class="skill-category-title">
+                            <i class="fas fa-mobile-alt gradient-text" style="font-size: 1.8rem;"></i> Conception Responsive
+                        </div>
+                        <p class="project-desc">Adaptation optimale sur tous les écrans (smartphones, tablettes, moniteurs 4K) avec une attention particulière aux performances.</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action: Demande de Projet Section -->
+                <div style="margin-top: 4rem; text-align: center;">
+                    <div class="glass-card" style="padding: 3rem 2rem; max-width: 800px; margin: 0 auto; border: 1px solid var(--border-hover); background: radial-gradient(circle at center, rgba(99, 102, 241, 0.12) 0%, rgba(22, 28, 39, 0.8) 100%);">
+                        <span class="section-subtitle">Collaborons ensemble</span>
+                        <h3 style="font-size: 1.8rem; margin: 0.5rem 0 1rem 0;">Avez-vous un projet numérique en tête ?</h3>
+                        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem auto; font-size: 1.05rem;">
+                            Discutons de vos besoins et obtenez une estimation personnalisée adaptée à votre budget pour la réalisation de votre site vitrine, plateforme SaaS ou application.
+                        </p>
+                        <button id="openProjectModalBtn" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1.05rem; box-shadow: 0 0 20px var(--accent-glow);">
+                            <i class="fas fa-paper-plane"></i> Faire une demande de projet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Popup: Demande de Projet Form -->
+    <div id="projectModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 12, 16, 0.85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem; overflow-y: auto;">
+        <div class="glass-card modal-content" style="max-width: 550px; width: 100%; position: relative; animation: modalFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid var(--border-hover);">
+            <button id="closeProjectModalBtn" aria-label="Fermer la fenêtre" style="position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: none; color: var(--text-muted); font-size: 1.4rem; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.75rem;">
+                <i class="fas fa-tasks gradient-text"></i> Demande de Projet
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">Remplissez ce formulaire pour recevoir un retour rapide et personnalisé.</p>
+
+            <form action="php/traitement_demande.php" method="POST" id="formDemandeProjetModal">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="modal_demande_nom" class="form-label">Nom & Prénom / Entreprise *</label>
+                    <input type="text" id="modal_demande_nom" name="nom_client" class="form-control" placeholder="Votre nom ou entreprise" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="modal_demande_email" class="form-label">Email professionnel *</label>
+                    <input type="email" id="modal_demande_email" name="email_client" class="form-control" placeholder="votre.email@exemple.com" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="modal_demande_type" class="form-label">Type de Projet *</label>
+                    <select id="modal_demande_type" name="type_projet" class="form-control" required>
+                        <option value="" disabled selected>Sélectionnez un type...</option>
+                        <option value="Site Vitrine">Site Vitrine / Portfolio</option>
+                        <option value="E-Commerce">Boutique E-Commerce</option>
+                        <option value="Application Web SaaS">Application Web SaaS sur-mesure</option>
+                        <option value="Application Mobile">Application Mobile (iOS / Android)</option>
+                        <option value="Refonte / Autre">Refonte ou Maintenance</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="modal_demande_budget" class="form-label">Budget Estimé</label>
+                    <select id="modal_demande_budget" name="budget" class="form-control">
+                        <option value="Moins de 500 000 FCFA">Moins de 500 000 FCFA</option>
+                        <option value="500 000 - 1 000 000 FCFA" selected>500 000 - 1 000 000 FCFA</option>
+                        <option value="1 000 000 - 3 000 000 FCFA">1 000 000 - 3 000 000 FCFA</option>
+                        <option value="Plus de 3 000 000 FCFA">Plus de 3 000 000 FCFA</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="modal_demande_description" class="form-label">Description du Besoin *</label>
+                    <textarea id="modal_demande_description" name="description_projet" class="form-control" placeholder="Précisez les fonctionnalités clés, délais souhaités..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Soumettre la demande
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-dot"></span> &lt;Gueye Tech/&gt;
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio. Tous droits réservés. Conçu avec passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Project Modal logic
+        const openModalBtn = document.getElementById('openProjectModalBtn');
+        const closeModalBtn = document.getElementById('closeProjectModalBtn');
+        const modal = document.getElementById('projectModal');
+        const modalTypeSelect = document.getElementById('modal_demande_type');
+        const modalBudgetSelect = document.getElementById('modal_demande_budget');
+
+        if (openModalBtn && modal) {
+            openModalBtn.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (closeModalBtn && modal) {
+            closeModalBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Automatic budget selection logic for modal
+        if (modalTypeSelect && modalBudgetSelect) {
+            const budgetMapping = {
+                'Site Vitrine': 'Moins de 500 000 FCFA',
+                'E-Commerce': '500 000 - 1 000 000 FCFA',
+                'Application Web SaaS': '1 000 000 - 3 000 000 FCFA',
+                'Application Mobile': '1 000 000 - 3 000 000 FCFA',
+                'Refonte / Autre': 'Moins de 500 000 FCFA'
+            };
+
+            modalTypeSelect.addEventListener('change', (e) => {
+                const selectedType = e.target.value;
+                const suggestedBudget = budgetMapping[selectedType];
+                if (suggestedBudget) {
+                    modalBudgetSelect.value = suggestedBudget;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez-moi pour toute opportunité, question ou proposition de collaboration.">
+    <title>Contact - Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-dot"></span> &lt;Gueye Tech/&gt;
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                    <li><a href="projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="experiences.html" class="nav-link">Expériences</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section" style="padding-top: calc(var(--header-height) + 3rem);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Restons en contact</span>
+                <h2 class="section-title">Contact</h2>
+                <p class="section-description">Vous avez une question ou une proposition de collaboration ? Envoyez-moi un message ci-dessous.</p>
+            </div>
+
+            <!-- Notification Alert Bar -->
+            <div id="contactAlert" class="alert-message alert-success">
+                <i class="fas fa-check-circle"></i> Votre message a été enregistré avec succès !
+            </div>
+
+            <!-- Contact Layout Grid (2 Columns: Form Left, Info Right) -->
+            <div class="contact-layout-grid">
+                
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form action="../php/traitement_contact.php" method="POST" id="formContactDirect">
+                        <div class="form-group">
+                            <label for="contact_nom" class="form-label-styled">NOM COMPLET</label>
+                            <input type="text" id="contact_nom" name="nom" class="form-control-styled" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_email" class="form-label-styled">ADRESSE EMAIL</label>
+                            <input type="email" id="contact_email" name="email" class="form-control-styled" placeholder="exemple@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_sujet" class="form-label-styled">SUJET</label>
+                            <select id="contact_sujet" name="sujet" class="form-control-styled" required>
+                                <option value="" disabled selected>Veuillez choisir un sujet</option>
+                                <option value="Demande de projet / Devis">Demande de projet / Devis</option>
+                                <option value="Proposition de collaboration">Proposition de collaboration</option>
+                                <option value="Question générale">Question générale</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact_message" class="form-label-styled">MESSAGE</label>
+                            <textarea id="contact_message" name="message" class="form-control-styled" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-send-styled">
+                            Envoyer le message <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Mes Coordonnées Stack -->
+                <div class="contact-info-wrapper">
+                    <h3 class="contact-info-title">Mes coordonnées</h3>
+
+                    <div class="contact-info-stack">
+                        <!-- Card 1: Email -->
+                        <a href="mailto:cheikhgc0118381@gmail.com" class="contact-info-card" id="emailContactCard" data-email="cheikhgc0118381@gmail.com" title="Cliquez pour copier l'email et envoyer un message">
+                            <div class="contact-info-icon icon-email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-details">
+                                <span class="contact-info-label">Email</span>
+                                <span class="contact-info-value">cheikhgc0118381@gmail.com</span>
+                            </div>
+                            <div class="contact-card-action" title="Copier l'email">
+                                <i class="far fa-copy"></i>
+                            </div>
+                        </a>
+
+                        <!-- Card 2: WhatsApp / Tel -->
+                        <a href="https://wa.me/221762606238" target="_blank" class="contact-info-card">
+                            <div class="contact-info-icon icon-phone">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-info-details">
+                                <span class="contact-info-label">WhatsApp / Tel</span>
+                                <span class="contact-info-value">+221 76 260 62 38</span>
+                            </div>
+                            <div class="contact-card-action">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </a>
+
+                        <!-- Card 3: GitHub -->
+                        <a href="https://github.com" target="_blank" class="contact-info-card">
+                            <div class="contact-info-icon icon-github">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-info-details">
+                                <span class="contact-info-label">GitHub</span>
+                                <span class="contact-info-value">github.com</span>
+                            </div>
+                            <div class="contact-card-action">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </a>
+
+                        <!-- Card 4: LinkedIn -->
+                        <a href="https://linkedin.com" target="_blank" class="contact-info-card">
+                            <div class="contact-info-icon icon-linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-info-details">
+                                <span class="contact-info-label">LinkedIn</span>
+                                <span class="contact-info-value">linkedin.com</span>
+                            </div>
+                            <div class="contact-card-action">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-dot"></span> &lt;Gueye Tech/&gt;
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Form feedback handling
+        const urlParams = new URLSearchParams(window.location.search);
+        const alertBox = document.getElementById('contactAlert');
+        if (urlParams.get('status') === 'success') {
+            alertBox.style.display = 'block';
+            alertBox.textContent = 'Votre message a été enregistré avec succès dans la base de données !';
+        }
+
+        // Pre-fill budget based on project type selection
+        const typeSelect = document.getElementById('demande_type');
+        const budgetSelect = document.getElementById('demande_budget');
+
+        if (typeSelect && budgetSelect) {
+            const budgetMapping = {
+                'Site Vitrine': 'Moins de 500 000 FCFA',
+                'E-Commerce': '500 000 - 1 000 000 FCFA',
+                'Application Web SaaS': '1 000 000 - 3 000 000 FCFA',
+                'Application Mobile': '1 000 000 - 3 000 000 FCFA',
+                'Refonte / Autre': 'Moins de 500 000 FCFA'
+            };
+
+            typeSelect.addEventListener('change', (e) => {
+                const selectedType = e.target.value;
+                const suggestedBudget = budgetMapping[selectedType];
+                if (suggestedBudget) {
+                    if (budgetSelect.tagName.toLowerCase() === 'select') {
+                        budgetSelect.value = suggestedBudget;
+                    } else {
+                        budgetSelect.value = suggestedBudget;
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

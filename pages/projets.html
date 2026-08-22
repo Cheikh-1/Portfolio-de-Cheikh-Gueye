@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Découvrez mes réalisations et projets web récents - Applications SaaS, E-Commerce, Mobile et IA.">
+    <title>Projets - Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-dot"></span> &lt;Gueye Tech/&gt;
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                    <li><a href="projets.html" class="nav-link active">Projets</a></li>
+                    <li><a href="experiences.html" class="nav-link">Expériences</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section" style="padding-top: calc(var(--header-height) + 3rem);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Portfolio</span>
+                <h2 class="section-title">Mes Réalisations</h2>
+                <p class="section-description">Projets web et SaaS développés dans le cadre académique et entrepreneurial.</p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="project-search-bar">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="projectSearchInput" class="search-input"
+                        placeholder="Rechercher un projet par mot-clé (ex: SaaS, football, marketplace)...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="saas">SaaS</button>
+                    <button class="filter-btn" data-filter="vitrine">Site Vitrine</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- Project Card 1: Teranga Draft -->
+                <div class="project-card-wrapper" data-category="saas" data-title="Teranga Draft"
+                    data-tags="SaaS sport football recrutement React TypeScript Supabase Tailwind CSS en conception">
+                    <article class="glass-card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="../images/projets/projet1.jpg" alt="Teranga Draft" class="project-img">
+                        </div>
+                        <div class="project-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span class="project-category">SaaS</span>
+                                <span class="tag" style="background: rgba(234, 179, 8, 0.15); color: #facc15; border-color: rgba(234, 179, 8, 0.3);">En conception</span>
+                            </div>
+                            <h3 class="project-title">Teranga Draft</h3>
+                            <p class="project-desc">Plateforme web (SaaS) mettant en relation joueurs de football et recruteurs en Afrique de l'Ouest, avec un focus initial sur le Sénégal (académies, clubs de Ligue 1/Ligue 2). Projet de fin d'année en Licence 2 Informatique.</p>
+                            <div class="tags-list">
+                                <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">Tailwind CSS</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="contact.html" class="btn btn-secondary"
+                                    style="padding: 0.4rem 1rem; font-size: 0.85rem;">
+                                    <i class="fas fa-info-circle"></i> En savoir plus
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Project Card 2: SaaS Teranga Motors -->
+                <div class="project-card-wrapper" data-category="saas" data-title="SaaS Teranga Motors"
+                    data-tags="SaaS automobile marketplace HTML CSS JavaScript PHP MySQL en conception">
+                    <article class="glass-card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="../images/projets/projet2.jpg" alt="SaaS Teranga Motors" class="project-img">
+                        </div>
+                        <div class="project-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span class="project-category">SaaS</span>
+                                <span class="tag" style="background: rgba(234, 179, 8, 0.15); color: #facc15; border-color: rgba(234, 179, 8, 0.3);">En conception</span>
+                            </div>
+                            <h3 class="project-title">SaaS Teranga Motors</h3>
+                            <p class="project-desc">Plateforme mettant en relation vendeurs et acheteurs de véhicules d'occasion au Sénégal. Inscription vendeur/acheteur, publication d'annonces, recherche par filtres, messagerie de mise en relation.</p>
+                            <div class="tags-list">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="contact.html" class="btn btn-secondary"
+                                    style="padding: 0.4rem 1rem; font-size: 0.85rem;">
+                                    <i class="fas fa-info-circle"></i> En savoir plus
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Project Card 3: Site SUNU PATRIMOINE LOCAL -->
+                <div class="project-card-wrapper" data-category="vitrine" data-title="Site SUNU PATRIMOINE LOCAL"
+                    data-tags="vitrine agroalimentaire HTML CSS en conception café Thiossane café Touba">
+                    <article class="glass-card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="../images/projets/projet3.jpg" alt="Site SUNU PATRIMOINE LOCAL" class="project-img">
+                        </div>
+                        <div class="project-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span class="project-category">Site Vitrine</span>
+                                <span class="tag" style="background: rgba(234, 179, 8, 0.15); color: #facc15; border-color: rgba(234, 179, 8, 0.3);">En conception</span>
+                            </div>
+                            <h3 class="project-title">Site SUNU PATRIMOINE LOCAL</h3>
+                            <p class="project-desc">Site vitrine pour l'entreprise agroalimentaire dont je suis Directeur Général, spécialisée dans la transformation de produits locaux (café Thiossane / café Touba conditionné).</p>
+                            <div class="tags-list">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="contact.html" class="btn btn-secondary"
+                                    style="padding: 0.4rem 1rem; font-size: 0.85rem;">
+                                    <i class="fas fa-info-circle"></i> En savoir plus
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Project Card 4: RASSOUL TIJARA IMMO -->
+                <div class="project-card-wrapper" data-category="vitrine" data-title="RASSOUL TIJARA IMMO"
+                    data-tags="vitrine immobilier HTML CSS en construction agence immobiliere">
+                    <article class="glass-card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="../images/projets/projet4.jpg" alt="RASSOUL TIJARA IMMO" class="project-img">
+                        </div>
+                        <div class="project-body">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <span class="project-category">Site Vitrine</span>
+                                <span class="tag" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">En construction</span>
+                            </div>
+                            <h3 class="project-title">RASSOUL TIJARA IMMO</h3>
+                            <p class="project-desc">Site web vitrine pour une agence immobilière familiale, présentant les biens disponibles (vente/location), les services de l'agence et un moyen de contact pour les clients potentiels.</p>
+                            <div class="tags-list">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="contact.html" class="btn btn-secondary"
+                                    style="padding: 0.4rem 1rem; font-size: 0.85rem;">
+                                    <i class="fas fa-info-circle"></i> En savoir plus
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+            <!-- Empty Search Result Indicator -->
+            <div id="noProjectsFound" style="display: none; text-align: center; padding: 4rem 1rem;">
+                <i class="fas fa-folder-open" style="font-size: 3rem; color: var(--text-dim); margin-bottom: 1rem;"></i>
+                <h3 style="font-size: 1.5rem; color: var(--text-muted);">Aucun projet ne correspond à votre recherche
+                </h3>
+                <p style="color: var(--text-dim);">Essayez un autre mot-clé ou modifiez la catégorie sélectionnée.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-dot"></span> &lt;Gueye Tech/&gt;
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/recherche-projets.js"></script>
+</body>
+
+</html>
