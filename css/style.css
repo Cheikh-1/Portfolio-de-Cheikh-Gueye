@@ -308,6 +308,14 @@ img {
   align-items: center;
 }
 
+.hero-name {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
