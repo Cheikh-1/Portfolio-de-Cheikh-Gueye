@@ -276,15 +276,14 @@
             const btnOriginalText = btn.innerHTML;
             btn.disabled = true;
             btn.innerHTML = 'Envoi en cours...';
-
-            const params = {
-                name: form.nom_client.value,
-                email: form.email_client.value,
-                phone: form.budget.value,
-                service: form.type_projet.value,
-                message: form.description_projet.value
-            };
-
+const params = {
+    title: form.type_projet.value,
+    name: form.nom_client.value,
+    email: form.email_client.value,
+    budget: form.budget.value,
+    service: form.type_projet.value,
+    message: form.description_projet.value
+};
             emailjs.send('service_iuofdtw', 'template_812kuri', params)
                 .then(function() {
                     alert('Votre demande a été envoyée avec succès !');
