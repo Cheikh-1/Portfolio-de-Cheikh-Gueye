@@ -7,6 +7,7 @@
     <title>Contact - Portfolio</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -168,39 +169,38 @@
 
     <script src="../js/main.js"></script>
     <script>
-        // Form feedback handling
-        const urlParams = new URLSearchParams(window.location.search);
-        const alertBox = document.getElementById('contactAlert');
-        if (urlParams.get('status') === 'success') {
-            alertBox.style.display = 'block';
-            alertBox.textContent = 'Votre message a été enregistré avec succès dans la base de données !';
-        }
+    <script>
+    emailjs.init("6w1bCma7qYbOiO6cS");
 
-        // Pre-fill budget based on project type selection
-        const typeSelect = document.getElementById('demande_type');
-        const budgetSelect = document.getElementById('demande_budget');
+    document.getElementById('formContactDirect').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        const btn = form.querySelector('button[type="submit"]');
+        const btnOriginalText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = 'Envoi en cours...';
 
-        if (typeSelect && budgetSelect) {
-            const budgetMapping = {
-                'Site Vitrine': 'Moins de 500 000 FCFA',
-                'E-Commerce': '500 000 - 1 000 000 FCFA',
-                'Application Web SaaS': '1 000 000 - 3 000 000 FCFA',
-                'Application Mobile': '1 000 000 - 3 000 000 FCFA',
-                'Refonte / Autre': 'Moins de 500 000 FCFA'
-            };
+        const params = {
+            name: form.nom.value,
+            email: form.email.value,
+            title: form.sujet.value,
+            message: form.message.value
+        };
 
-            typeSelect.addEventListener('change', (e) => {
-                const selectedType = e.target.value;
-                const suggestedBudget = budgetMapping[selectedType];
-                if (suggestedBudget) {
-                    if (budgetSelect.tagName.toLowerCase() === 'select') {
-                        budgetSelect.value = suggestedBudget;
-                    } else {
-                        budgetSelect.value = suggestedBudget;
-                    }
-                }
+        emailjs.send('service_iuofdtw', 'template_0lgtbiw', params)
+            .then(function() {
+                document.getElementById('contactAlert').style.display = 'block';
+                document.getElementById('contactAlert').textContent = 'Votre message a été envoyé avec succès !';
+                form.reset();
+            })
+            .catch(function(error) {
+                alert('Une erreur est survenue. Veuillez réessayer. (' + error.text + ')');
+            })
+            .finally(function() {
+                btn.disabled = false;
+                btn.innerHTML = btnOriginalText;
             });
-        }
-    </script>
+    });
+</script>
 </body>
 </html>
